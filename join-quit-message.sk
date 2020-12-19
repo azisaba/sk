@@ -1,5 +1,6 @@
 on join:
     set join message to "&aJoin » &r%player% &7さんがサーバーに参加しました！"
+
     send title "&4アジ鯖&rへようこそ" for 2 seconds
     send action bar "オンライン: &a%number of all players% &r人" to all players
 
