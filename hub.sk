@@ -1,14 +1,10 @@
-on load:
-    set {hub} to location 0.5, 64, 0.5 in world "lobby"
-    set {hub}'s yaw to 180
-
 on join:
     wait a tick
-    teleport player to {hub}
+    command "/mv tp %player% lobby"
 
 command /hub:
     executable by: players
     aliases: /lobby, /spawn
     trigger:
         send "&bHubにテレポートしています…"
-        teleport player to {hub}
+        command "/mv tp %player% lobby"
