@@ -1,2 +1,3 @@
 on load:
     command "/mv import lobby normal"
+    command "/mv setspawn lobby 0.5 64 0.5 180 0"
