@@ -1,6 +1,5 @@
 on load:
-    clear {powered_by::*}
-    add "&3DDPS", "&6Ubuntu", "&bDocker", "&8Yatopia" and "&cSkript" to {powered_by::*}
+    set {powered_by::*} to "&3DDPS", "&6Ubuntu", "&bDocker", "&8Yatopia" and "&cSkript"
     log "%{powered_by::*}%"
 
 on server list ping:
