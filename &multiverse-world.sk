@@ -1,0 +1,2 @@
+on load:
+    command "/mv import lobby normal"
