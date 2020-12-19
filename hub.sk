@@ -1,10 +1,10 @@
 on join:
     wait a tick
-    command "/mv tp %player% lobby"
+    console command "/mv tp %player% lobby"
 
 command /hub:
     executable by: players
     aliases: /lobby, /spawn
     trigger:
         send "&bHubにテレポートしています…"
-        command "/mv tp %player% lobby"
+        console command "/mv tp %player% lobby"
