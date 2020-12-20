@@ -1,2 +1,0 @@
-on world change:
-    broadcast "&eMove » &r%player% &7さんが &r%world% &7サーバーに移動しました。"
