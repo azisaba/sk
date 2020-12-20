@@ -1,4 +1,4 @@
-every 3 second:
+every a second:
     # 最新のtpsを取得
     set {_tps} to tps from last 1m
 
@@ -18,6 +18,10 @@ every 3 second:
     # プレイヤー数の取得
     set {_players} to number of all players
 
+    # エンティティ数の取得
+    set {_living-entities} to number of all living entities
+    set {_entities} to number of all entities
+
     loop all players:
         # プレイヤーのpingを取得する
         set {_ping} to loop-player's ping
@@ -36,6 +40,7 @@ every 3 second:
         set {_header} to "%{_header}%&7PING: %{_color-ping}%&7 ms%nl%"
         set {_header} to "%{_header}%&7TPS: %{_color-tps}%&7 / 20 (± &r%{_tps_diff}%&7)%nl%"
         set {_header} to "%{_header}%&7オンラインプレイヤー: &a%number of players in loop-player's world%&7 / &r%{_players}%%nl%"
+        set {_header} to "%{_header}%&7エンティティ: &r%{_living-entities}%&7 living / &r%{_entities}%&7 all%nl%"
         set {_header} to "%{_header}%&8------------------------------------------------"
 
         # プレイヤーのtabのヘッダーを変更
