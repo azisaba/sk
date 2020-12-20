@@ -1,13 +1,42 @@
 every 3 second:
+    # 最新のtpsを取得
     set {_tps} to tps from last 1m
+
+    # 色の付いたtpsも用意する
+    if {_tps} is greater than 20.1: # .1なら許容範囲
+        set {_color-tps} to "&b%{_tps}%"
+    else if {_tps} is greater than 18:
+        set {_color-tps} to "&a%{_tps}%"
+    else if {_tps} is greater than 16:
+        set {_color-tps} to "&e%{_tps}%"
+    else:
+        set {_color-tps} to "&c%{_tps}%"
+
+    # tpsの差分を計算
     set {_tps_diff} to abs(20 - {_tps})
+
+    # プレイヤー数の取得
     set {_players} to number of all players
 
     loop all players:
+        # プレイヤーのpingを取得する
+        set {_ping} to loop-player's ping
+
+        # 色の付いたpingも用意する
+        if {_ping} is less than 50:
+            set {_color-ping} to "&a%{_ping}%"
+        else if {_ping} is less than 150:
+            set {_color-ping} to "&e%{_ping}%"
+        else:
+            set {_color-ping} to "&c%{_ping}%"
+
+        # ヘッダーの設定
         set {_header} to "&7ようこそ、 &r%loop-player%&7 さん！%nl%"
         set {_header} to "%{_header}%&8------------------------------------------------%nl%"
-        set {_header} to "%{_header}%&7PING: &a%loop-player's ping%&7 ms%nl%"
-        set {_header} to "%{_header}%&7TPS: &a%{_tps}%&7 / 20 (± &r%{_tps_diff}%&7)%nl%"
+        set {_header} to "%{_header}%&7PING: %{_color-ping}%&7 ms%nl%"
+        set {_header} to "%{_header}%&7TPS: %{_color-tps}%&7 / 20 (± &r%{_tps_diff}%&7)%nl%"
         set {_header} to "%{_header}%&7オンラインプレイヤー: &a%number of players in loop-player's world%&7 / &r%{_players}%%nl%"
         set {_header} to "%{_header}%&8------------------------------------------------"
+
+        # プレイヤーのtabのヘッダーを変更
         set loop-player's tab list header to {_header}
