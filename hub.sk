@@ -6,5 +6,5 @@ command /hub:
     executable by: players
     aliases: /lobby, /spawn
     trigger:
-        send "&bHubにテレポートしています…"
+        send "&bロビーにテレポートしています…"
         console command "/mv tp %player% lobby"
