@@ -2,16 +2,24 @@ on join:
     wait 2 seconds
     "%world%" contains "lobby"
 
-    send title "&4アジ鯖&rへようこそ" for 2 seconds
-    play sound "ENTITY_PLAYER_LEVELUP" with pitch 0.5
+    join_default_server(player)
 
-    clear inventory of player
+on world change:
+    "%world%" contains "lobby"
+
+    join_default_server(player)
+
+function join_default_server(p: player):
+    send title "&4アジ鯖&rへようこそ" to {_p} for 2 seconds
+    play sound "ENTITY_PLAYER_LEVELUP" with pitch 0.5 to {_p}
+
+    clear {_p}'s inventory
 
     wait 5 ticks
-    send "&eロビーへようこそ^w^"
+    send "&eロビーへようこそ^w^" to {_p}
 
     wait a second
-    send "&cこれを受け取るのじゃ！"
+    send "&cこれを受け取るのじゃ！" to {_p}
 
-    give 64 enchanted golden apple to player
-    give 1 feather named "&e天使のはね" to player
+    give 64 enchanted golden apple to {_p}
+    give 1 feather named "&e天使のはね" to {_p}
