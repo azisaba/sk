@@ -39,7 +39,7 @@ every a second:
         set {_header} to "%{_header}%&8------------------------------------------------%nl%"
         set {_header} to "%{_header}%&7PING: %{_color-ping}%&7 ms%nl%"
         set {_header} to "%{_header}%&7TPS: %{_color-tps}%&7 / 20 (± &r%{_tps_diff}%&7)%nl%"
-        set {_header} to "%{_header}%&7オンラインプレイヤー: &a%number of players in loop-player's world%&7 / &r%{_players}%%nl%"
+        set {_header} to "%{_header}%&7プレイヤー: &a%number of players in loop-player's world%&7 current / &r%{_players}%&7 online%nl%"
         set {_header} to "%{_header}%&7エンティティ: &r%{_living-entities}%&7 living / &r%{_entities}%&7 all%nl%"
         set {_header} to "%{_header}%&8------------------------------------------------"
 
