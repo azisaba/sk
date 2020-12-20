@@ -41,6 +41,7 @@ every a second:
         set {_header} to "%{_header}%&7TPS: %{_color-tps}%&7 / 20 (± &r%{_tps_diff}%&7)%nl%"
         set {_header} to "%{_header}%&7プレイヤー: &a%number of players in loop-player's world%&7 current / &r%{_players}%&7 online%nl%"
         set {_header} to "%{_header}%&7エンティティ: &r%{_living-entities}%&7 living / &r%{_entities}%&7 all%nl%"
+        set {_header} to "%{_header}%&7現在地: %loop-player's location%&7 @ &r%loop-player's world%%nl%"
         set {_header} to "%{_header}%&8------------------------------------------------"
 
         # プレイヤーのtabのヘッダーを変更
