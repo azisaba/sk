@@ -1,0 +1,3 @@
+command /kiai:
+    trigger:
+        send "Screaaaam!!!"
