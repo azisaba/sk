@@ -37,12 +37,25 @@ every a second:
         # ヘッダーの設定
         set {_header} to "&7ようこそ、 &r%loop-player%&7 さん！%nl%"
         set {_header} to "%{_header}%&8------------------------------------------------%nl%"
+        set {_header} to "%{_header}%&7オンラインプレイヤー: &a%number of players in loop-player's world%&7 / &r%{_players}%%nl%"
         set {_header} to "%{_header}%&7PING: %{_color-ping}%&7 ms%nl%"
         set {_header} to "%{_header}%&7TPS: %{_color-tps}%&7 / 20 (± &r%{_tps_diff}%&7)%nl%"
-        set {_header} to "%{_header}%&7プレイヤー: &a%number of players in loop-player's world%&7 current / &r%{_players}%&7 online%nl%"
-        set {_header} to "%{_header}%&7エンティティ: &r%{_living-entities}%&7 living / &r%{_entities}%&7 all%nl%"
-        set {_header} to "%{_header}%&7現在地: %loop-player's location%&7 @ &r%loop-player's world%%nl%"
+
+        if {tab-debug.%loop-player%} is set:
+            set {_header} to "%{_header}%&7現在地: %loop-player's location%&7 @ &r%loop-player's world%%nl%"
+            set {_header} to "%{_header}%&7エンティティ: &r%{_living-entities}%&7 living / &r%{_entities}%&7 all%nl%"
+
         set {_header} to "%{_header}%&8------------------------------------------------"
 
         # プレイヤーのtabのヘッダーを変更
         set loop-player's tab list header to {_header}
+
+command /tab:
+    executable by: players
+    trigger:
+        if {tab-debug.%player%} is not set:
+            set {tab-debug.%player%} to true
+            send "&7tabデバッグ機能: &a有効"
+        else:
+            delete {tab-debug.%player%}
+            send "&7tabデバッグ機能: &c無効"
