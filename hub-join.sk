@@ -2,7 +2,9 @@ on join:
     wait a second
 
     if "%world%" contains "lobby":
+        send title "&4アジ鯖&rへようこそ" for 2 seconds
         play sound "entity.player.levelup" with pitch 0.5
+
         clear inventory of player
 
         wait 5 tick
