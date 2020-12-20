@@ -1,10 +1,13 @@
-on join:
-    set player's tab list header to "&7ようこそ、 &r%player% &7さん！"
-
 every 3 second:
     set {_tps} to tps from last 1m
     set {_tps_diff} to abs(20 - {_tps})
     set {_players} to number of all players
 
     loop all players:
-        set loop-player's tab list footer to "&7» PING: &r%loop-player's ping%&7 ms / &7TPS: &r%{_tps}% &7(± &r%{_tps_diff}%&7) / オンライン: &r%{_players}% &7«"
+        set {_header} to "&7ようこそ、 &r%loop-player%&7 さん！%nl%"
+        set {_header} to "%{_header}%&8------------------------------------------------%nl%"
+        set {_header} to "%{_header}%&7PING: &a%loop-player's ping%&7 ms%nl%"
+        set {_header} to "%{_header}%&7TPS: &a%{_tps}%&7 / 20 (± &r%{_tps_diff}%&7)%nl%"
+        set {_header} to "%{_header}%&7オンラインプレイヤー: &a%number of players in loop-player's world%&7 / &r%{_players}%%nl%"
+        set {_header} to "%{_header}%&8------------------------------------------------"
+        set loop-player's tab list header to {_header}
