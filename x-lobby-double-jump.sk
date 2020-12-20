@@ -1,0 +1,33 @@
+on tool change:
+    "%world%" contains "lobby"
+
+    if player's held item is feather:
+        send "&6二段ジャンプが可能になりました"
+
+on jump:
+    "%world%" contains "lobby"
+
+    if player's held item is feather:
+        set player's flight mode to true
+
+on flight toggle:
+    "%world%" contains "lobby"
+
+    if player's gamemode is survival:
+        set player's flight mode to false
+
+    if player's held item is feather:
+        cancel event
+
+        wait a tick
+        play sound "ENTITY_BAT_TAKEOFF" with pitch 0.6
+        push player in direction of player at speed 1
+        push player upwards at speed 2
+        send action bar "%player's velocity%" to player
+
+on damage:
+    "%world%" contains "lobby"
+
+    if victim's held item is feather:
+        if damage cause is fall:
+            cancel event

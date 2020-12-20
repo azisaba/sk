@@ -1,0 +1,17 @@
+on join:
+    wait 2 seconds
+    "%world%" contains "lobby"
+
+    send title "&4アジ鯖&rへようこそ" for 2 seconds
+    play sound "ENTITY_PLAYER_LEVELUP" with pitch 0.5
+
+    clear inventory of player
+
+    wait 5 ticks
+    send "&eロビーへようこそ^w^"
+
+    wait a second
+    send "&cこれを受け取るのじゃ！"
+
+    give 64 enchanted golden apple to player
+    give 1 feather named "&e天使のはね" to player
