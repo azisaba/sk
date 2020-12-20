@@ -1,0 +1,9 @@
+on join:
+    set player's tab list header to "&7ようこそ、 &r%player% &7さん！"
+
+every 3 second:
+    set {_tps} to tps from last 1m
+    set {_tps_diff} to abs(20 - {_tps})
+
+    loop all players:
+        set loop-player's tab list footer to "&7» PING: &r%loop-player's ping%&7 ms / &7TPS: &r%{_tps}% &7(± &r%{_tps_diff}%&7) / オンライン: &r%number of all players% &7«"
