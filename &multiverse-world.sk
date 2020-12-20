@@ -1,3 +1,6 @@
 on load:
     console command "/mv import lobby normal"
     console command "/mv setspawn lobby 0.5 64 0.5 180 0"
+
+    console command "/mvinv creategroup lobby-server"
+    console command "/mvinv addworld lobby lobby-server"

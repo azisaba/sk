@@ -1,0 +1,14 @@
+on join:
+    wait a second
+
+    if "%world%" contains "lobby":
+        play sound "entity.player.levelup" with pitch 0.5
+        clear inventory of player
+
+        wait 5 tick
+        send "&eロビーへようこそ^w^"
+
+        wait a second
+        send "&cこれを受け取るのじゃ！"
+
+        give 64 enchanted golden apple to player
