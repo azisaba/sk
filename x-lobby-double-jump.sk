@@ -14,12 +14,13 @@ on flight toggle:
     "%world%" contains "lobby"
 
     if player's gamemode is survival:
+        wait a tick
+
         set player's flight mode to false
 
     if player's held item is feather:
         cancel event
 
-        wait a tick
         play sound "ENTITY_BAT_TAKEOFF" with pitch 0.6
         push player in direction of player at speed 1
         push player upwards at speed 2
