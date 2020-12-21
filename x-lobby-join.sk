@@ -9,10 +9,10 @@ on world change:
     join_default_server(player)
 
 function join_default_server(p: player):
+    clear {_p}'s inventory
+
     send title "&bアジ鯖&rへようこそ！" to {_p} for 2 seconds
     play sound "ENTITY_PLAYER_LEVELUP" with pitch 0.5 to {_p}
-
-    clear {_p}'s inventory
 
     wait 5 ticks
     send "&eロビーへようこそ^w^" to {_p}
