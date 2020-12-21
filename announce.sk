@@ -1,0 +1,15 @@
+on load:
+    delete {announce::*}
+
+    add "&a[定期] &dDiscord&7はこちら！ &rhttps://discord.gg/azisaba" to {announce::*}
+    add "&a[定期] &bTwitter&7フォローしてね！ &rhttps://twitter.com/AzisabaNetwork" to {announce::*}
+    add "&a[定期] &6寄付システム実装しました！ &rhttps://store.azisaba.net" to {announce::*}
+    add "&a[定期] &7ルールをご確認ください。 &rhttps://azisaba.net/terms" to {announce::*}
+
+    add "&b[お知らせ] &c投票&7よろしくお願いします！" to {announce::*}
+    add "&b[お知らせ] &7煽るような発言は控えましょう！" to {announce::*}
+
+    add "&c[注意] &7新型コロナウイルスにお気をつけてお過ごしください。" to {announce::*}
+
+every a minute:
+    broadcast "%random element out of {announce::*}%"
