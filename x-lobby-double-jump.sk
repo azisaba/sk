@@ -13,7 +13,9 @@ on jump:
 on flight toggle:
     "%world%" starts with "lobby"
 
+    # クリエイティブのフライを許可
     if player's gamemode is survival:
+        # 少し待機しないとたまに飛べなくなる
         wait a tick
 
         set player's flight mode to false
@@ -22,13 +24,18 @@ on flight toggle:
         cancel event
 
         play sound "ENTITY_BAT_TAKEOFF" with pitch 0.6
+
+        # 向いている方向に飛ばす
         push player in direction of player at speed 1
+        # 上方向に強めに飛ばす
         push player upwards at speed 2
+
         send action bar "%player's velocity%" to player
 
 on damage:
     "%world%" starts with "lobby"
 
     if victim's held item is feather:
+        # 落下ダメージ無効化
         if damage cause is fall:
             cancel event

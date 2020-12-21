@@ -1,5 +1,8 @@
 on join:
+    # 既にロビーにいる場合の参加処理を待機
     wait a tick
+
+    # ロビーにテレポート
     console command "/mv tp %player% lobby"
 
 command /hub:

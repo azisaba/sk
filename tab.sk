@@ -54,6 +54,7 @@ every a second:
 command /tab:
     executable by: players
     trigger:
+        # tabデバッグ機能の切り替え
         if {tab-debug.%player%} is not set:
             set {tab-debug.%player%} to true
             send "&7tabデバッグ機能: &a有効"
