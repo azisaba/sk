@@ -9,7 +9,7 @@ on world change:
     join_default_server(player)
 
 function join_default_server(p: player):
-    send title "&4アジ鯖&rへようこそ" to {_p} for 2 seconds
+    send title "&bアジ鯖&rへようこそ！" to {_p} for 2 seconds
     play sound "ENTITY_PLAYER_LEVELUP" with pitch 0.5 to {_p}
 
     clear {_p}'s inventory
