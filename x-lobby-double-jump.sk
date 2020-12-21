@@ -1,17 +1,17 @@
 on tool change:
-    "%world%" contains "lobby"
+    "%world%" starts with "lobby"
 
     if player's held item is feather:
         send "&6二段ジャンプが可能になりました"
 
 on jump:
-    "%world%" contains "lobby"
+    "%world%" starts with "lobby"
 
     if player's held item is feather:
         set player's flight mode to true
 
 on flight toggle:
-    "%world%" contains "lobby"
+    "%world%" starts with "lobby"
 
     if player's gamemode is survival:
         wait a tick
@@ -27,7 +27,7 @@ on flight toggle:
         send action bar "%player's velocity%" to player
 
 on damage:
-    "%world%" contains "lobby"
+    "%world%" starts with "lobby"
 
     if victim's held item is feather:
         if damage cause is fall:

@@ -1,11 +1,11 @@
 on join:
     wait 2 seconds
-    "%world%" contains "lobby"
+    "%world%" starts with "lobby"
 
     join_default_server(player)
 
 on world change:
-    "%world%" contains "lobby"
+    "%world%" starts with "lobby"
 
     join_default_server(player)
 
