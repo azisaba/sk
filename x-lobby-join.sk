@@ -1,5 +1,4 @@
 on join:
-    wait 2 seconds
     "%world%" starts with "lobby"
 
     join_default_server(player)
