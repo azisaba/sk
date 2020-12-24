@@ -1,3 +1,117 @@
+on load:
+    # フッターアニメーションを定義
+    delete {footer-animation::*}
+
+    # フッターアニメーション (フェーズ1)
+    add "_" to {footer-animation::*}
+    add "A_" to {footer-animation::*}
+    add "Az_" to {footer-animation::*}
+    add "Azi_" to {footer-animation::*}
+    add "Azis_" to {footer-animation::*}
+    add "Azisa_" to {footer-animation::*}
+    add "Azisab_" to {footer-animation::*}
+    add "Azisaba_" to {footer-animation::*}
+    add "Azisaba _" to {footer-animation::*}
+    add "Azisaba N_" to {footer-animation::*}
+    add "Azisaba Ne_" to {footer-animation::*}
+    add "Azisaba Net_" to {footer-animation::*}
+    add "Azisaba Netw_" to {footer-animation::*}
+    add "Azisaba Netwo_" to {footer-animation::*}
+    add "Azisaba Networ_" to {footer-animation::*}
+    add "Azisaba Network_" to {footer-animation::*}
+    add "&0Azisaba Network" to {footer-animation::*}
+    add "&1Azisaba Network" to {footer-animation::*}
+    add "&2Azisaba Network" to {footer-animation::*}
+    add "&3Azisaba Network" to {footer-animation::*}
+    add "&4Azisaba Network" to {footer-animation::*}
+    add "&5Azisaba Network" to {footer-animation::*}
+    add "&6Azisaba Network" to {footer-animation::*}
+    add "&7Azisaba Network" to {footer-animation::*}
+    add "&8Azisaba Network" to {footer-animation::*}
+    add "&9Azisaba Network" to {footer-animation::*}
+    add "&aAzisaba Network" to {footer-animation::*}
+    add "&bAzisaba Network" to {footer-animation::*}
+    add "&cAzisaba Network" to {footer-animation::*}
+    add "&dAzisaba Network" to {footer-animation::*}
+    add "&eAzisaba Network" to {footer-animation::*}
+    add "&fAzisaba Network" to {footer-animation::*}
+    add "Azisaba_Network" to {footer-animation::*}
+    add "Azisaba_Network" to {footer-animation::*}
+    add "Azisab___etwork" to {footer-animation::*}
+    add "Azisab___etwork" to {footer-animation::*}
+    add "Azisa_____twork" to {footer-animation::*}
+    add "Azisa_____twork" to {footer-animation::*}
+    add "Azis_______work" to {footer-animation::*}
+    add "Azis_______work" to {footer-animation::*}
+    add "Azi_________ork" to {footer-animation::*}
+    add "Azi_________ork" to {footer-animation::*}
+    add "Az___________rk" to {footer-animation::*}
+    add "Az___________rk" to {footer-animation::*}
+    add "A_____________k" to {footer-animation::*}
+    add "A_____________k" to {footer-animation::*}
+    add "_______________" to {footer-animation::*}
+    add "_____________" to {footer-animation::*}
+    add "___________" to {footer-animation::*}
+    add "_________" to {footer-animation::*}
+    add "_______" to {footer-animation::*}
+    add "_____" to {footer-animation::*}
+    add "___" to {footer-animation::*}
+    add "_" to {footer-animation::*}
+
+    # フッターアニメーション (フェーズ2)
+    add "_" to {footer-animation::*}
+    add " _" to {footer-animation::*}
+    add "  _" to {footer-animation::*}
+    add "   _" to {footer-animation::*}
+    add "    _" to {footer-animation::*}
+    add "     _" to {footer-animation::*}
+    add "      _" to {footer-animation::*}
+    add "       _" to {footer-animation::*}
+    add "        _" to {footer-animation::*}
+    add "         _" to {footer-animation::*}
+    add "          _" to {footer-animation::*}
+    add "           _" to {footer-animation::*}
+    add "            _" to {footer-animation::*}
+    add "             _" to {footer-animation::*}
+    add "              _" to {footer-animation::*}
+    add "               _" to {footer-animation::*}
+    add "                _" to {footer-animation::*}
+    add "                 _" to {footer-animation::*}
+    add "                  _" to {footer-animation::*}
+    add "                   _" to {footer-animation::*}
+    add "                    _" to {footer-animation::*}
+    add "                &b+&r <" to {footer-animation::*}
+    add "               &bx&rk  " to {footer-animation::*}
+    add "             &b+&rork  " to {footer-animation::*}
+    add "           &bx&rtwork  " to {footer-animation::*}
+    add "         &b+&rNetwork  " to {footer-animation::*}
+    add "       &bx&ra Network  " to {footer-animation::*}
+    add "     &b+&raba Network  " to {footer-animation::*}
+    add "   &bx&risaba Network  " to {footer-animation::*}
+    add " &b+&rAzisaba Network  " to {footer-animation::*}
+    add "&bx&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&b-&r Azisaba Network  " to {footer-animation::*}
+    add "&m  Azi&rsaba Network  " to {footer-animation::*}
+    add "&m  Azisaba &rNetwork  " to {footer-animation::*}
+    add "  Azi&msaba Netwo&rrk  " to {footer-animation::*}
+    add "  /zi/aba &mNetwork  &r" to {footer-animation::*}
+    add "  _/i_//a /e/wo&mrk  &r" to {footer-animation::*}
+    add "  __/___/ _/_//r/  " to {footer-animation::*}
+    add "  _______ _____/_  " to {footer-animation::*}
+    add "  _______ _______  " to {footer-animation::*}
+    add "_______________" to {footer-animation::*}
+    add "___________" to {footer-animation::*}
+    add "_______" to {footer-animation::*}
+    add "___" to {footer-animation::*}
+    add "_" to {footer-animation::*}
+
 every a second:
     # 最新のtpsを取得
     set {_tps} to tps from last 1m
@@ -50,6 +164,19 @@ every a second:
 
         # プレイヤーのtabのヘッダーを変更
         set loop-player's tab list header to {_header}
+
+every 5 ticks:
+    # フッターアニメーションのインデックスを初期化
+    if {fa-index} is not set:
+        set {fa-index} to 0
+
+    loop all players:
+        # プレイヤーのtabのフッターを変更
+        set loop-player's tab list footer to {footer-animation::%{fa-index}%}
+
+    # フッターアニメーションのインデックスを更新
+    add 1 to {fa-index}
+    set {fa-index} to mod({fa-index}, size of {footer-animation::*})
 
 command /tab:
     executable by: players
