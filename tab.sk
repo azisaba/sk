@@ -112,6 +112,10 @@ on load:
     add "___" to {footer-animation::*}
     add "_" to {footer-animation::*}
 
+    # フッターアニメーションのインデックスを初期化
+    if {fa-index} is not set:
+        set {fa-index} to 0
+
 every a second:
     # 最新のtpsを取得
     set {_tps} to tps from last 1m
@@ -166,10 +170,6 @@ every a second:
         set loop-player's tab list header to {_header}
 
 every 5 ticks:
-    # フッターアニメーションのインデックスを初期化
-    if {fa-index} is not set:
-        set {fa-index} to 0
-
     loop all players:
         # プレイヤーのtabのフッターを変更
         set loop-player's tab list footer to {footer-animation::%{fa-index}%}
