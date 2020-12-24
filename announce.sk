@@ -10,5 +10,7 @@ on load:
     add "&b[お知らせ] &7煽るような発言は控えましょう！" to {announce::*}
     add "&c[注意] &7新型コロナウイルスにお気をつけてお過ごしください。" to {announce::*}
 
+    log {announce::*}
+
 every a minute:
     broadcast "%random element out of {announce::*}%"

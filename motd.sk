@@ -1,6 +1,7 @@
 on load:
     set {powered_by::*} to "&3DDPS", "&6Ubuntu", "&bDocker", "&8Yatopia" and "&cSkript"
-    log "%{powered_by::*}%"
+
+    log {powered_by::*}
 
 on server list ping:
     set motd to "          &4&nAzisaba Network&e v2 &7[&a1.7.2-1.16.4&7]%nl%      &fアジ鯖、たのしい。 &7| &oPowered by %random element out of {powered_by::*}%"
