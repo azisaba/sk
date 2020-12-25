@@ -1,0 +1,12 @@
+on load:
+    # 全てのワールドを読み込む
+    create_world("lobby", 0.5, 64, 0.5, 180, 0)
+    create_world("lgw_lobby", 852.5, 4, 709.5)
+    create_world("lgw_tutorial", 0.5, 4, 0.5, 180, 0)
+    create_world("lgw_game", 0.5, 65, 0.5, -90, 0)
+
+function create_world(world: string, x: number, y: number, z: number, yaw: number = 0, pitch: number = 0):
+    # ワールドが存在しない場合にのみ読み込む
+    if all worlds doesn't contain {_world}:
+        console command "/mv import %{_world}% normal"
+        console command "/mv setspawn %{_world}% %{_x}% %{_y}% %{_z}% %{_yaw}% %{_pitch}%"

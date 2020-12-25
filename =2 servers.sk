@@ -1,0 +1,13 @@
+on load:
+    # 全てのサーバーを読み込む (ワールド名を同じものから開始する必要あり)
+    create_server("lobby", ("lobby"))
+    create_server("lgw", ("lgw_lobby", "lgw_tutorial" and "lgw_game"))
+
+function create_server(server: string, worlds: objects):
+    # グループの作成
+    console command "/mvinv creategroup %{_server}%-server"
+    # グループ内で全てを共有
+    console command "/mvinv addshares everything %{_server}%-server"
+    # グループにワールドを追加
+    loop {_worlds::*}:
+        console command "/mvinv addworld %loop-value% %{_server}%-server"
