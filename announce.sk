@@ -1,7 +1,6 @@
 on load:
+    # 定期メッセージの追加
     delete {announce::*}
-
-    # 全サーバー
     add "&a[定期] &dDiscord&7はこちら！ &rhttps://discord.gg/azisaba" to {announce::*}
     add "&a[定期] &bTwitter&7フォローしてね！ &rhttps://twitter.com/AzisabaNetwork" to {announce::*}
     add "&a[定期] &6寄付システム実装しました！ &rhttps://store.azisaba.net" to {announce::*}
@@ -9,8 +8,10 @@ on load:
     add "&b[お知らせ] &c投票&7よろしくお願いします！" to {announce::*}
     add "&b[お知らせ] &7煽るような発言は控えましょう！" to {announce::*}
     add "&c[注意] &7新型コロナウイルスにお気をつけてお過ごしください。" to {announce::*}
-
     log {announce::*}
 
 every a minute:
-    broadcast "%random element out of {announce::*}%"
+    # 次に表示するメッセージをランダムに取得
+    set {_next_message} to random element out of {announce::*}
+    # 定期メッセージを表示
+    broadcast "%{_next_message}%"

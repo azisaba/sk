@@ -1,7 +1,10 @@
 on load:
-    set {powered_by::*} to "&3DDPS", "&6Ubuntu", "&bDocker", "&8Yatopia" and "&cSkript"
-
-    log {powered_by::*}
+    # スポンサーの追加
+    set {sponsor::*} to "&3DDPS", "&6Ubuntu", "&bDocker", "&8Yatopia" and "&cSkript"
+    log {sponsor::*}
 
 on server list ping:
-    set motd to "          &4&nAzisaba Network&e v2 &7[&a1.7.2-1.16.4&7]%nl%      &fアジ鯖、たのしい。 &7| &oPowered by %random element out of {powered_by::*}%"
+    # ランダムなスポンサーの取得
+    set {_powered_by} to random element out of {sponsor::*}
+    # MOTDの変更
+    set motd to "          &4&nAzisaba Network&e v2 &7[&a1.7.2-1.16.4&7]%nl%      &fアジ鯖、たのしい。 &7| &oPowered by %{_powered_by}%"
