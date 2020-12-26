@@ -1,17 +1,17 @@
 on tool change:
-    "%world%" starts with "lobby"
+    "%world%" starts with "lobby" # develop
 
     if player's held item is feather:
         send "&6二段ジャンプが可能になりました"
 
 on jump:
-    "%world%" starts with "lobby"
+    "%world%" starts with "lobby" # develop
 
     if player's held item is feather:
         set player's flight mode to true
 
 on flight toggle:
-    "%world%" starts with "lobby"
+    "%world%" starts with "lobby" # develop
 
     # クリエイティブのフライを許可
     if player's gamemode is survival:
@@ -33,7 +33,7 @@ on flight toggle:
         send action bar "%player's velocity%" to player
 
 on damage:
-    "%world%" starts with "lobby"
+    "%world%" starts with "lobby" # develop
 
     if victim's held item is feather:
         # 落下ダメージ無効化

@@ -1,10 +1,10 @@
 on join:
-    "%world%" starts with "lobby"
+    "%world%" starts with "lobby" # develop
 
     join_default_server(player)
 
 on world change:
-    "%world%" starts with "lobby"
+    "%world%" starts with "lobby" # develop
 
     join_default_server(player)
 

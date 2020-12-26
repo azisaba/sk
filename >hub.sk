@@ -1,13 +1,13 @@
 on join:
     # 既にロビーにいる場合の参加処理を待機
-    wait a tick
+    wait a tick # develop
 
     # ロビーにテレポート
     console command "/mv tp %player% lobby"
 
 command /hub:
     executable by: players
-    aliases: /lobby, /spawn
+    aliases: /lobby
     trigger:
         send "&bロビーにテレポートしています…"
         console command "/mv tp %player% lobby"
